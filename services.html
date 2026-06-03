@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Zeno AI Automation</title>
+  <meta name="description" content="Comprehensive AI automation solutions designed specifically for SMEs. We start with sales automation and expand across your entire organization." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <style>
+    .page-hero { padding: 72px 0 56px; background: var(--bg-light); }
+    .page-hero h1 { margin-bottom: 16px; }
+    .page-hero p { font-size: 1.05rem; max-width: 620px; }
+
+    /* Core Offering */
+    .core-badge { text-align: center; margin-bottom: 12px; }
+    .core-badge span { background: rgba(75,71,192,0.1); color: var(--brand-purple); padding: 4px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
+    .core-header { text-align: center; margin-bottom: 10px; }
+    .core-subtitle { text-align: center; color: var(--text-mid); margin-bottom: 56px; font-size: 1rem; }
+
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-item { display: flex; gap: 16px; align-items: flex-start; padding: 24px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+    .feature-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(75,71,192,0.08); display: flex; align-items: center; justify-content: center; color: var(--brand-purple); flex-shrink: 0; }
+    .feature-item h4 { font-size: 0.98rem; margin-bottom: 6px; }
+    .feature-item p { font-size: 0.85rem; }
+
+    /* Expansion */
+    .expansion-section { background: var(--bg-light); }
+    .exp-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; margin-bottom: 20px; }
+    .exp-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+    .exp-header h3 { font-size: 1.1rem; }
+    .exp-num { width: 32px; height: 32px; border-radius: 50%; background: var(--brand-purple); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .exp-features { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .exp-feature { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-mid); }
+    .exp-feature svg { color: var(--brand-cyan); flex-shrink: 0; }
+
+    /* Methodology */
+    .method-step { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 24px 28px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 16px; }
+    .method-num { width: 44px; height: 44px; border-radius: 50%; background: var(--brand-purple); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .method-content h4 { font-size: 1rem; margin-bottom: 4px; }
+    .method-content p { font-size: 0.85rem; }
+    .method-week { font-size: 0.75rem; font-weight: 600; color: var(--brand-purple); background: rgba(75,71,192,0.08); padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+
+    @media (max-width: 640px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .exp-features { grid-template-columns: 1fr; }
+      .method-step { grid-template-columns: auto 1fr; }
+      .method-week { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/logo.png" alt="Zeno AI Automation" />
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="navbar-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="contact.html" >Contact</a>
+    </div>
+    <div class="navbar-cta">
+      <a href="contact.html" class="btn-primary">Schedule Free Audit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container reveal">
+    <h1>Our Services</h1>
+    <p>Comprehensive AI automation solutions designed specifically for SMEs. We start with sales automation and expand across your entire organization.</p>
+  </div>
+</section>
+
+<!-- CORE OFFERING: SALES AUTOMATION -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="core-badge reveal"><span>Our Core Offering</span></div>
+    <div class="core-header reveal"><h2>Sales Automation System</h2></div>
+    <p class="core-subtitle reveal">Transform your sales operations with AI-powered automation that delivers measurable ROI in weeks</p>
+    <div class="feature-grid">
+      <div class="feature-item reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h4>Lead Qualification</h4>
+          <p>Automatically qualify and score leads from multiple channels including WhatsApp, email, and web forms.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </div>
+        <div>
+          <h4>Automated Follow-ups</h4>
+          <p>Never miss a lead. Intelligent follow-up sequences that engage prospects at the right time.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div>
+          <h4>CRM Integration</h4>
+          <p>Seamless integration with your existing CRM. Automatic data entry and record updates.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <h4>Performance Reports</h4>
+          <p>Real-time dashboards and automated reports. Track every metric that matters.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div>
+          <h4>Proposal Generation</h4>
+          <p>AI-assisted proposal drafting that saves hours and maintains consistency.</p>
+        </div>
+      </div>
+      <div class="feature-item reveal">
+        <div class="feature-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <h4>Invoice Management</h4>
+          <p>Automated invoice chasing and payment follow-ups. Reduce outstanding receivables.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPANSION SERVICES -->
+<section class="expansion-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Expansion Services</h2>
+      <p>Once we prove ROI with sales automation, we expand to transform your entire organization</p>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <h3>HR Workflow Automation</h3>
+        <div class="exp-num">1</div>
+      </div>
+      <p style="font-size:0.88rem; margin-bottom:16px;">Streamline recruitment, onboarding, leave management, and performance tracking. Reduce HR administrative burden by up to 70%.</p>
+      <div class="exp-features">
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Automated candidate screening
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Digital onboarding workflows
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Leave approval automation
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Performance review scheduling
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <h3>Internal Reporting Systems</h3>
+        <div class="exp-num">2</div>
+      </div>
+      <p style="font-size:0.88rem; margin-bottom:16px;">Transform data chaos into actionable insights. Automated report generation and distribution across all departments.</p>
+      <div class="exp-features">
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Real-time dashboards
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Scheduled report delivery
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Custom KPI tracking
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Executive summaries
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <h3>Operations Coordination</h3>
+        <div class="exp-num">3</div>
+      </div>
+      <p style="font-size:0.88rem; margin-bottom:16px;">Eliminate bottlenecks in daily operations. Automate task assignment, approval workflows, and inter-department coordination.</p>
+      <div class="exp-features">
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Workflow automation
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Approval routing
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Task assignment
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Status tracking
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <h3>AI-Driven Decision Dashboards</h3>
+        <div class="exp-num">4</div>
+      </div>
+      <p style="font-size:0.88rem; margin-bottom:16px;">Make better decisions faster. Real-time business intelligence with predictive insights and trend analysis.</p>
+      <div class="exp-features">
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Predictive analytics
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Trend identification
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Performance forecasting
+        </div>
+        <div class="exp-feature">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Risk alerts
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Our Methodology</h2>
+      <p>A proven, structured approach that minimizes risk and maximizes impact</p>
+    </div>
+    <div class="method-step reveal">
+      <div class="method-num">01</div>
+      <div class="method-content">
+        <h4>Audit One Department</h4>
+        <p>We start by analyzing a single department (usually Sales) to identify high-impact automation opportunities</p>
+      </div>
+      <span class="method-week">Week 1</span>
+    </div>
+    <div class="method-step reveal">
+      <div class="method-num">02</div>
+      <div class="method-content">
+        <h4>Identify Repetitive Workflows</h4>
+        <p>Map out manual, time-consuming tasks that are perfect candidates for automation</p>
+      </div>
+      <span class="method-week">Week 1–2</span>
+    </div>
+    <div class="method-step reveal">
+      <div class="method-num">03</div>
+      <div class="method-content">
+        <h4>Design Automation Architecture</h4>
+        <p>Create a custom automation blueprint tailored to your specific workflows and systems</p>
+      </div>
+      <span class="method-week">Week 2–3</span>
+    </div>
+    <div class="method-step reveal">
+      <div class="method-num">04</div>
+      <div class="method-content">
+        <h4>Implement AI-Driven Solutions</h4>
+        <p>Deploy automation with minimal disruption to your daily operations</p>
+      </div>
+      <span class="method-week">Week 3–5</span>
+    </div>
+    <div class="method-step reveal">
+      <div class="method-num">05</div>
+      <div class="method-content">
+        <h4>Measure ROI</h4>
+        <p>Track time saved, efficiency gained, and business impact with detailed analytics</p>
+      </div>
+      <span class="method-week">Week 6+</span>
+    </div>
+    <div class="method-step reveal">
+      <div class="method-num">06</div>
+      <div class="method-content">
+        <h4>Expand to Adjacent Departments</h4>
+        <p>Replicate success across other departments, building your complete automation ecosystem</p>
+      </div>
+      <span class="method-week">Ongoing</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="background:var(--bg-light);">
+  <div class="container reveal">
+    <h2>Ready to Automate Your Success?</h2>
+    <p>Schedule a free audit and discover how much time and money you could save with automation.</p>
+    <a href="contact.html" class="btn-primary">Schedule Your Free Audit →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/Zeno Logo monochrom removebg V2.png" alt="Zeno AI Automation" />
+        <p>Your Automation Transformation Partner. We help SMEs in the UAE and GCC reduce operational inefficiencies and improve profitability through AI-driven automation.</p>
+        <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dubai, UAE</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>zeno@zeno-ai.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.29a16 16 0 0 0 5.8 5.8l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <span>+971 52 942 4026</span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">© 2026 Zeno AI Automation. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeno AI Automation – Your Business, on Autopilot</title>
+  <meta name="description" content="Transform your operations with AI-driven automation. Reduce inefficiencies, multiply productivity, and deliver measurable ROI – one department at a time." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <style>
+    /* ── HERO ── */
+    .hero {
+      padding: 80px 0 64px;
+      background: var(--bg-light);
+    }
+    .hero-inner {
+      max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-block; background: rgba(75,71,192,0.1); color: var(--brand-purple);
+      padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero-title { font-size: clamp(2.4rem, 5vw, 3.8rem); line-height: 1.1; margin-bottom: 20px; }
+    .hero-sub { font-size: 1.05rem; color: var(--text-mid); margin-bottom: 32px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+    .hero-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 60px rgba(75,71,192,0.18); }
+    .hero-image img { width: 100%; height: 420px; object-fit: cover; display: block; }
+
+    /* ── WHY CHOOSE ── */
+    .why-card { text-align: center; padding: 36px 28px; }
+    .why-icon { width: 56px; height: 56px; border-radius: 14px; background: rgba(75,71,192,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; color: var(--brand-purple); }
+    .why-card h3 { margin-bottom: 10px; font-size: 1.1rem; }
+
+    /* ── HOW IT WORKS ── */
+    .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .how-item { display: flex; gap: 28px; align-items: flex-start; }
+    .how-num { font-size: 3.5rem; font-weight: 700; color: rgba(75,71,192,0.15); line-height: 1; width: 52px; flex-shrink: 0; }
+    .how-item h4 { font-size: 1rem; margin-bottom: 6px; }
+    .how-item p { font-size: 0.88rem; }
+
+    /* ── RESULTS SECTION ── */
+    .results-section { background: var(--brand-purple); padding: 80px 0; }
+    .results-top { margin-bottom: 48px; }
+    .results-checklist li { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.88); margin-bottom: 12px; font-size: 0.95rem; }
+    .results-checklist svg { color: var(--brand-cyan); flex-shrink: 0; }
+    .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+    .result-card { background: rgba(255,255,255,0.12); border-radius: var(--radius); padding: 24px; }
+    .result-card .big-num { font-size: 2.4rem; font-weight: 700; color: #fff; line-height: 1; }
+    .result-card .lbl { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 4px; }
+    .result-card svg { color: var(--brand-cyan); margin-bottom: 8px; }
+    .read-case-btn { margin-top: 28px; }
+
+    /* ── CTA BOTTOM ── */
+    .cta-bottom { text-align: center; padding: 80px 0; }
+    .cta-bottom h2 { margin-bottom: 14px; }
+    .cta-bottom p { margin-bottom: 32px; color: var(--text-mid); }
+
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-image { display: none; }
+      .how-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/logo.png" alt="Zeno AI Automation" />
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="navbar-links" id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="contact.html" >Contact</a>
+    </div>
+    <div class="navbar-cta">
+      <a href="contact.html" class="btn-primary">Schedule Free Audit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content reveal">
+      <span class="hero-badge">AI Automation for SMEs</span>
+      <h1 class="hero-title">Your business, on autopilot</h1>
+      <p class="hero-sub">Transform your operations with AI-driven automation. Reduce inefficiencies, multiply productivity, and deliver measurable ROI – one department at a time.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Schedule Free Audit →</a>
+        <a href="about.html" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-image reveal">
+      <img src="assets/hero-photo.jpg" alt="Business professionals discussing automation strategy" />
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ZENO -->
+<section style="background:#fff;">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>Why Choose Zeno?</h2>
+      <p>We don't just automate – we transform your operations with measurable results</p>
+    </div>
+    <div class="grid-3">
+      <div class="card why-card reveal">
+        <div class="why-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Targeted Approach</h3>
+        <p>Start with one department, prove ROI, then expand. Minimal risk, maximum impact.</p>
+      </div>
+      <div class="card why-card reveal">
+        <div class="why-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Measurable ROI</h3>
+        <p>Track every hour saved, every process optimized, every dollar earned through automation.</p>
+      </div>
+      <div class="card why-card reveal">
+        <div class="why-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Rapid Implementation</h3>
+        <p>See results in weeks, not months. Our 6-week automation stack delivers immediate value.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background:var(--bg-light);">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2>How It Works</h2>
+      <p>Our proven 6-step process to automate your operations</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-item reveal">
+        <div class="how-num">01</div>
+        <div>
+          <h4>Audit Department</h4>
+          <p>We analyze one department to identify automation opportunities</p>
+        </div>
+      </div>
+      <div class="how-item reveal">
+        <div class="how-num">02</div>
+        <div>
+          <h4>Identify Workflows</h4>
+          <p>Pinpoint repetitive, high-impact tasks that drain productivity</p>
+        </div>
+      </div>
+      <div class="how-item reveal">
+        <div class="how-num">03</div>
+        <div>
+          <h4>Design Architecture</h4>
+          <p>Create a custom automation blueprint tailored to your needs</p>
+        </div>
+      </div>
+      <div class="how-item reveal">
+        <div class="how-num">04</div>
+        <div>
+          <h4>Implement Solutions</h4>
+          <p>Deploy AI-driven automation with minimal disruption</p>
+        </div>
+      </div>
+      <div class="how-item reveal">
+        <div class="how-num">05</div>
+        <div>
+          <h4>Measure ROI</h4>
+          <p>Track time saved, efficiency gained, and revenue impact</p>
+        </div>
+      </div>
+      <div class="how-item reveal">
+        <div class="how-num">06</div>
+        <div>
+          <h4>Expand &amp; Scale</h4>
+          <p>Replicate success across other departments</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REAL RESULTS -->
+<section class="results-section">
+  <div class="container">
+    <div class="results-top reveal">
+      <h2 style="color:#fff; margin-bottom:10px;">Real Results, Real Impact</h2>
+      <p style="color:rgba(255,255,255,0.78); margin-bottom:28px;">See how we helped a Dubai-based trading company transform their operations in just 6 weeks.</p>
+      <ul class="results-checklist">
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          18 hours saved per week
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          3x faster invoice collection
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          94% fewer missed follow-ups
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          AED 18,000+ monthly value delivered
+        </li>
+      </ul>
+      <a href="case-studies.html" class="btn-white read-case-btn">Read Full Case Study →</a>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="big-num">18hrs</div>
+        <div class="lbl">Saved Weekly</div>
+      </div>
+      <div class="result-card reveal">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        <div class="big-num">3x</div>
+        <div class="lbl">Faster ROI</div>
+      </div>
+      <div class="result-card reveal">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        <div class="big-num">94%</div>
+        <div class="lbl">Accuracy</div>
+      </div>
+      <div class="result-card reveal">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <div class="big-num">AED 18K</div>
+        <div class="lbl">Monthly Value</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-bottom">
+  <div class="container reveal">
+    <h2>Ready to Automate Your Success?</h2>
+    <p>Schedule a free audit and discover how much time and money you could save with automation.</p>
+    <a href="contact.html" class="btn-primary">Schedule Your Free Audit →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/Zeno Logo monochrom removebg V2.png" alt="Zeno AI Automation" />
+        <p>Your Automation Transformation Partner. We help SMEs in the UAE and GCC reduce operational inefficiencies and improve profitability through AI-driven automation.</p>
+        <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dubai, UAE</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>zeno@zeno-ai.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.29a16 16 0 0 0 5.8 5.8l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <span>+971 52 942 4026</span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">© 2026 Zeno AI Automation. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

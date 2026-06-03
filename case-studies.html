@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies – Zeno AI Automation</title>
+  <meta name="description" content="Real results from real businesses. See how we've transformed operations for SMEs across the UAE and GCC." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <style>
+    .page-hero { padding: 72px 0 56px; background: var(--bg-light); }
+    .page-hero h1 { margin-bottom: 16px; max-width: 360px; }
+    .page-hero h1 span { display: block; }
+    .page-hero p { font-size: 1.05rem; max-width: 620px; }
+
+    /* Featured Case Study */
+    .case-study-card {
+      background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg);
+      color: var(--text-dark); margin-bottom: 60px; position: relative; overflow: hidden;
+    }
+    .case-study-card::before {
+      content: none;
+    }
+    .case-study-header { background: var(--brand-purple); padding: 48px; color: #fff; }
+    .case-study-body { padding: 44px 48px 48px; }
+    .featured-label { display: inline-block; background: rgba(255,255,255,0.2); color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 16px; }
+    .case-study-card h2 { color: #fff; font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: 10px; }
+    .case-study-card .subtitle { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
+
+    .metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 0 -48px 48px; padding: 14px 48px 40px; border-bottom: 1px solid var(--border); }
+    .metric-box { text-align: center; }
+    .metric-box .icon { color: var(--brand-cyan); margin-bottom: 8px; }
+    .metric-box .num { font-size: 1.8rem; font-weight: 700; color: #111; line-height: 1; }
+    .metric-box .desc { font-size: 0.75rem; color: var(--text-mid); margin-top: 4px; }
+
+    /* Content sections inside case study */
+    .cs-section { margin-bottom: 40px; }
+    .cs-section h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 16px; color: #111; display: flex; align-items: center; gap: 10px; }
+    .cs-section h3::before { content: ''; display: block; width: 4px; height: 18px; background: var(--brand-cyan); border-radius: 2px; }
+    .case-study-body p { color: var(--text-mid) !important; }
+    .case-study-body div[style*="rgba(255,255,255"] { color: var(--text-light) !important; }
+
+    .challenge-list { list-style: none; }
+    .challenge-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--text-mid); font-size: 0.9rem; margin-bottom: 10px; }
+    .challenge-list li::before { content: '•'; color: var(--brand-cyan); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .challenge-quote { border-left: 3px solid var(--brand-cyan); padding-left: 16px; margin: 20px 0; }
+    .challenge-quote p { color: var(--text-mid); font-size: 0.88rem; font-style: italic; }
+
+    .solution-steps { display: flex; flex-direction: column; gap: 16px; }
+    .solution-step { background: rgba(75,71,192,0.08); border: 1px solid rgba(75,71,192,0.18); border-radius: var(--radius); padding: 20px 24px; }
+    .solution-step h4 { color: #111; font-size: 0.95rem; margin-bottom: 12px; }
+    .solution-features { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .sol-feat { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--text-mid); }
+    .sol-feat svg { color: var(--brand-cyan); flex-shrink: 0; }
+
+    .results-grid-cs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .result-box { background: rgba(75,71,192,0.08); border: 1px solid rgba(75,71,192,0.18); border-radius: var(--radius); padding: 20px 24px; }
+    .result-box .label { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .result-box .value { font-size: 1.6rem; font-weight: 700; color: var(--text-dark); line-height: 1; }
+    .result-box .sub { font-size: 0.78rem; color: var(--text-light); margin-top: 4px; }
+    .result-box-full { background: rgba(75,71,192,0.08); border: 1px solid rgba(75,71,192,0.18); border-radius: var(--radius); padding: 24px; text-align: center; }
+    .result-box-full .aed { font-size: 2.4rem; font-weight: 700; color: var(--text-dark); }
+    .result-box-full .aed-label { font-size: 0.82rem; color: var(--text-light); margin-top: 4px; }
+
+    /* Impact Summary */
+    .impact-card { background: rgba(75,71,192,0.08); border: 1px solid rgba(75,71,192,0.18); border-radius: var(--radius); padding: 28px; margin-top: 32px; }
+    .impact-card h3 { color: var(--text-dark); margin-bottom: 20px; font-size: 1.05rem; }
+    .impact-list { list-style: none; }
+    .impact-list li { display: flex; align-items: flex-start; gap: 10px; color: var(--text-mid); font-size: 0.88rem; margin-bottom: 10px; }
+    .impact-list li svg { color: var(--brand-cyan); flex-shrink: 0; margin-top: 1px; }
+
+    /* CTA */
+    .cta-section { text-align: center; padding: 80px 0; }
+    .cta-section h2 { margin-bottom: 12px; }
+    .cta-section p { margin-bottom: 32px; }
+
+    @media (max-width: 768px) {
+      .metrics-row { grid-template-columns: 1fr 1fr; }
+      .results-grid-cs { grid-template-columns: 1fr; }
+      .solution-features { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .case-study-header, .case-study-body { padding: 28px 20px; }
+      .metrics-row { margin: 0 -20px 36px; padding: 8px 20px 28px; }
+      .metrics-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="navbar-logo">
+      <img src="assets/logo.png" alt="Zeno AI Automation" />
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="navbar-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="case-studies.html" class="active">Case Studies</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-cta">
+      <a href="contact.html" class="btn-primary">Schedule Free Audit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container reveal">
+    <h1><span>Case</span><span>Studies</span></h1>
+    <p>Real results from real businesses. See how we've transformed operations for SMEs across the UAE and GCC.</p>
+  </div>
+</section>
+
+<!-- FEATURED CASE STUDY -->
+<section style="background:#fff; padding-top:60px; padding-bottom:80px;">
+  <div class="container">
+    <div class="case-study-card reveal">
+      <div class="case-study-header">
+        <span class="featured-label">Featured Case Study</span>
+        <h2>Dubai Trading Company: From Manual Chaos to Automated Excellence</h2>
+        <p class="subtitle">How a 6-week automation stack saved 18 hours per week and accelerated invoice collection by 3x</p>
+      </div>
+      <div class="case-study-body">
+
+      <!-- Key Metrics -->
+      <div class="metrics-row">
+        <div class="metric-box">
+          <div class="icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="num">18hrs</div>
+          <div class="desc">Saved per Week</div>
+        </div>
+        <div class="metric-box">
+          <div class="icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+          </div>
+          <div class="num">3x</div>
+          <div class="desc">Faster Collection</div>
+        </div>
+        <div class="metric-box">
+          <div class="icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="num">94%</div>
+          <div class="desc">Fewer Missed Leads</div>
+        </div>
+        <div class="metric-box">
+          <div class="icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="num">AED 18K</div>
+          <div class="desc">Monthly Value</div>
+        </div>
+      </div>
+
+      <!-- The Client -->
+      <div class="cs-section">
+        <h3>The Client</h3>
+        <p style="color:rgba(255,255,255,0.82); font-size:0.9rem;">A Dubai-based trading company focused on import and distribution with a lean operations team managing multiple workflows simultaneously.</p>
+      </div>
+
+      <!-- The Challenge -->
+      <div class="cs-section">
+        <h3>The Challenge</h3>
+        <p style="color:rgba(255,255,255,0.78); font-size:0.88rem; margin-bottom:14px;">The operations manager was drowning in manual, repetitive tasks that consumed 3–4 hours daily:</p>
+        <ul class="challenge-list">
+          <li>Manually copying WhatsApp leads into spreadsheets</li>
+          <li>Chasing unpaid invoices by phone every single day</li>
+          <li>Typing repetitive follow-up messages to prospects</li>
+          <li>Manually compiling daily sales summaries for the owner</li>
+        </ul>
+        <div class="challenge-quote">
+          <p>Result: Invoices outstanding for 45+ days, warm leads going cold, and no reliable performance visibility for leadership.</p>
+        </div>
+      </div>
+
+      <!-- The Solution -->
+      <div class="cs-section">
+        <h3>The Solution</h3>
+        <p style="color:rgba(255,255,255,0.78); font-size:0.88rem; margin-bottom:16px;">Zeno AI implemented a 6-week automation stack with three targeted workflows:</p>
+        <div class="solution-steps">
+          <div class="solution-step">
+            <h4>1. Lead Capture &amp; CRM Sync</h4>
+            <p style="color:rgba(255,255,255,0.72); font-size:0.82rem; margin-bottom:12px;">Automated lead qualification engine using WhatsApp Business API</p>
+            <div class="solution-features">
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Automated lead logging into Zoho CRM
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Real-time alerts to sales team
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Lead scoring and qualification
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Multi-channel integration
+              </div>
+            </div>
+          </div>
+          <div class="solution-step">
+            <h4>2. Invoice Chasing Engine</h4>
+            <p style="color:rgba(255,255,255,0.72); font-size:0.82rem; margin-bottom:12px;">Automated follow-up system for overdue invoices</p>
+            <div class="solution-features">
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Monitored overdue invoices in Zoho Books
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Automatic WhatsApp &amp; email follow-ups (Day 7, 14, 21)
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Escalation process for Day 30
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Complete activity logging
+              </div>
+            </div>
+          </div>
+          <div class="solution-step">
+            <h4>3. Daily Owner Briefing</h4>
+            <p style="color:rgba(255,255,255,0.72); font-size:0.82rem; margin-bottom:12px;">Automated executive summary delivered every morning</p>
+            <div class="solution-features">
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Triggered daily at 7:30 AM
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Pulls revenue, AR, and orders
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                AI-generated 5-line summary
+              </div>
+              <div class="sol-feat">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                Delivered via WhatsApp
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Results -->
+      <div class="cs-section">
+        <h3>The Results</h3>
+        <div class="results-grid-cs">
+          <div class="result-box">
+            <div class="label">Time Saved</div>
+            <div class="value">18 hrs/week</div>
+            <div class="sub">Operations manager freed</div>
+          </div>
+          <div class="result-box">
+            <div class="label">Invoice Collection</div>
+            <div class="value">3x faster</div>
+            <div class="sub">From 45 days to 11 days</div>
+          </div>
+          <div class="result-box">
+            <div class="label">Lead Response</div>
+            <div class="value">4 hours → 4 mins</div>
+            <div class="sub">60x improvement</div>
+          </div>
+          <div class="result-box">
+            <div class="label">Missed Follow-ups</div>
+            <div class="value">94% reduction</div>
+            <div class="sub">Near-perfect execution</div>
+          </div>
+        </div>
+        <div class="result-box-full">
+          <div style="font-size:0.8rem; color:rgba(255,255,255,0.65); margin-bottom:6px;">Estimated Monthly Value Delivered</div>
+          <div class="aed">AED 18,000+</div>
+          <div class="aed-label">Ongoing operational savings and revenue protection</div>
+        </div>
+      </div>
+
+      <!-- Impact Summary -->
+      <div class="impact-card">
+        <h3>Impact Summary</h3>
+        <p style="color:rgba(255,255,255,0.78); font-size:0.88rem; margin-bottom:16px;">By automating three critical workflows, we transformed the operations manager's role from manual task execution to strategic oversight. The company now operates with systematic efficiency, improved cash flow, and complete performance visibility.</p>
+        <ul class="impact-list">
+          <li>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Operations manager refocused on strategic initiatives
+          </li>
+          <li>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Zero missed leads or follow-ups
+          </li>
+          <li>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Predictable invoice collection timelines
+          </li>
+          <li>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Daily executive visibility without manual effort
+          </li>
+          <li>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Foundation built for expanding automation to other departments
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="background:var(--bg-light);">
+  <div class="container reveal">
+    <h2>Ready for Your Success Story?</h2>
+    <p>Let's identify the automation opportunities in your business. Schedule a free audit today.</p>
+    <a href="contact.html" class="btn-primary">Schedule Your Free Audit</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/Zeno Logo monochrom removebg V2.png" alt="Zeno AI Automation" />
+        <p>Your Automation Transformation Partner. We help SMEs in the UAE and GCC reduce operational inefficiencies and improve profitability through AI-driven automation.</p>
+        <a href="https://linkedin.com" class="social-link" target="_blank" rel="noopener">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Dubai, UAE</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>zeno@zeno-ai.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.29a16 16 0 0 0 5.8 5.8l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <span>+971 52 942 4026</span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">© 2026 Zeno AI Automation. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
